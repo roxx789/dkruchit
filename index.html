@@ -108,9 +108,9 @@
                 });
 
                 if (navigator.sendBeacon) {
-                    navigator.sendBeacon('capi.php', payload);
+                    navigator.sendBeacon('/api/capi', payload);
                 } else {
-                    fetch('capi.php', {
+                    fetch('/api/capi', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: payload,
