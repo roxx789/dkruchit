@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // CORS Headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
     const pixel_id = '1069242212826477'; // Aapka Pixel ID
     const access_token = 'EAAQPoXcPCrEBSypifnOlJcvkuLxhcMIhhaskFit4LoRxeJBKQbHK3KUiTcnySTOZCZBV9ZBIfZBiALPBXiNP4jnEYdGv4fOup4FdByZBU7agtiNWNowhw0SCG1LbBp9giKJWJK0s5zhGZCOtZB5LkNy7SrhvCzHkZAUw9TqqwXTlQh2KLWx7zw7XfaZCEN5J97AZDZD'; // Aapka Access Token
-    const test_event_code = 'TEST1073'; // Live chalne ke baad ise khali '' kar dena
+    const test_event_code = 'TEST1073'; // Test poora hone ke baad ise khali '' kar dena
 
     const clientIp = req.headers['x-forwarded-for'] ? req.headers['x-forwarded-for'].split(',')[0].trim() : (req.socket.remoteAddress || '');
     const userAgent = req.headers['user-agent'] || '';
@@ -61,4 +61,4 @@ export default async function handler(req, res) {
   } catch (err) {
     return res.status(500).json({ error: err.message });
   }
-}
+};
