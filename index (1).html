@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Telegram Channel</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2173920493422118');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2173920493422118&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  text-align:center;
+  background:linear-gradient(135deg,#0d47a1,#b71c1c);
+  color:#fff;
+  padding-bottom:120px;
+}
+
+/* TOP BAR */
+.top-btn{
+  display:block;
+  background:#ffd600;
+  padding:15px;
+  font-weight:bold;
+  font-size:18px;
+  text-decoration:none;
+  color:#000;
+}
+
+/* PROFILE */
+.profile img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  margin-top:20px;
+  border:5px solid #ffd600;
+}
+
+/* TEXT */
+.title{font-size:22px;font-weight:bold;margin-top:10px;color:#ffd600;}
+.subtitle{font-size:16px;font-weight:bold;margin:10px;}
+.counter{margin:10px;font-weight:bold;}
+
+/* BOX */
+.box{
+  background:#fff3cd;
+  color:#000;
+  margin:10px 20px;
+  padding:12px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+/* BUTTON */
+.join-btn{
+  display:block;
+  background:#ffd600;
+  margin:20px;
+  padding:15px;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:10px;
+  text-decoration:none;
+  color:#000;
+}
+
+/* COUNTDOWN */
+#countdown{
+  font-size:18px;
+  font-weight:bold;
+  margin-top:15px;
+  color:#ffd600;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BUTTON -->
+<a href="https://t.me/+we1VmotMbCFmMzE1" class="top-btn">
+JOIN TELEGRAM CHANNEL
+</a>
+
+<!-- PROFILE -->
+<div class="profile">
+<img src="profile.jpg" alt="Trader">
+</div>
+
+<!-- CONTENT -->
+<div class="title">👑 तकदीर का बादशाह (( सट्टा किंग ))</div>
+
+<div class="subtitle">
+डेली फ्री गेम 🔥 सबसे पहले अपडेट<br>
+टेलीग्राम जॉइन करो और आज का नंबर पाओ
+</div>
+
+<div class="counter">👥 20,000+ Users Joined</div>
+
+<div class="box">💎 गाजियाबाद | फरीदाबाद</div>
+<div class="box">💎 गली | दिसावर</div>
+<div class="box">📈 100% FIX GAME CLAIM</div>
+
+<!-- ⏳ COUNTDOWN -->
+<div id="countdown">Redirecting in 10 sec...</div>
+
+<!-- 🔥 BUTTON -->
+<a href="https://t.me/+we1VmotMbCFmMzE1"
+   class="join-btn"
+   onclick="fbq('track','Subscribe')">
+👉 JOIN TELEGRAM NOW
+</a>
+
+<!-- ⏳ SCRIPT -->
+<script>
+let timeLeft = 10;
+let countdownEl = document.getElementById("countdown");
+
+let timer = setInterval(function(){
+  timeLeft--;
+  countdownEl.innerHTML = "Redirecting in " + timeLeft + " sec...";
+
+  if(timeLeft <= 3){
+    countdownEl.style.color = "red";
+  }
+
+  if(timeLeft <= 0){
+    clearInterval(timer);
+    window.location.href = "https://t.me/+we1VmotMbCFmMzE1";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
