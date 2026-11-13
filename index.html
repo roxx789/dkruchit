@@ -73,58 +73,58 @@
     </div>
 
     <script>
-        let isLeadFired = false;
-
-        // Cookie reader helper for _fbp and _fbc
-        function getCookie(name) {
-            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-            return match ? match[2] : null;
-        }
-
-        function redirectToTelegram() {
-            var telegramLink = "https://t.me/+D1h09HkuEGQ2MTU1";
-            var btn = document.getElementById("joinBtn");
-
-            if (!isLeadFired) {
-                isLeadFired = true;
-                btn.innerText = "Redirecting to Telegram...";
-                btn.disabled = true;
-
-                // 1. Generate Unique Event ID for Deduplication
-                var leadEventId = 'lead_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
-
-                // 2. Fire Browser Pixel Event with Event ID
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', {}, {eventID: leadEventId});
-                }
-
-                // 3. Send Data to Server CAPI (capi.php) in background
-                var payload = JSON.stringify({
-                    event_name: 'Lead',
-                    event_id: leadEventId,
-                    event_source_url: window.location.href,
-                    fbp: getCookie('_fbp'),
-                    fbc: getCookie('_fbc')
-                });
-
-                if (navigator.sendBeacon) {
-                    navigator.sendBeacon('/api/capi', payload);
-                } else {
-                    fetch('/api/capi', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: payload,
-                        keepalive: true
-                    }).catch(function(err) {});
-                }
+            let isLeadFired = false;
+    
+            // Cookie reader helper for _fbp and _fbc
+            function getCookie(name) {
+                let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                return match ? match[2] : null;
             }
-
-            // 4. Safe Redirection (700ms delay for reliable tracking)
-            setTimeout(function() {
-                window.location.href = telegramLink;
-            }, 700);
-        }
-    </script>
+    
+            function redirectToTelegram() {
+                var telegramLink = "https://t.me/+D1h09HkuEGQ2MTU1";
+                var btn = document.getElementById("joinBtn");
+    
+                if (!isLeadFired) {
+                    isLeadFired = true;
+                    btn.innerText = "Redirecting to Telegram...";
+                    btn.disabled = true;
+    
+                    // 1. Generate Unique Event ID for Deduplication
+                    var leadEventId = 'lead_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
+    
+                    // 2. Fire Browser Pixel Event with Event ID
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', {}, {eventID: leadEventId});
+                    }
+    
+                    // 3. Send Data to Server CAPI (/api/capi) in background
+                    var payload = JSON.stringify({
+                        event_name: 'Lead',
+                        event_id: leadEventId,
+                        event_source_url: window.location.href,
+                        fbp: getCookie('_fbp'),
+                        fbc: getCookie('_fbc')
+                    });
+    
+                    if (navigator.sendBeacon) {
+                        navigator.sendBeacon('/api/capi', payload);
+                    } else {
+                        fetch('/api/capi', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: payload,
+                            keepalive: true
+                        }).catch(function(err) {});
+                    }
+                }
+    
+                // 4. Safe Redirection (700ms delay for reliable tracking)
+                setTimeout(function() {
+                    window.location.href = telegramLink;
+                }, 700);
+            }
+        </script>
 
 </body>
 </html>
