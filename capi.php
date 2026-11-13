@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 // ==========================================
 // 1. APNI META DETAILS (ALREADY SET)
 // ==========================================
-$pixel_id        = '1635305401957355'; // Aapka Pixel ID
+$pixel_id        = '1069242212826477'; // Aapka Pixel ID
 $access_token    = 'EAAQPoXcPCrEBSypifnOlJcvkuLxhcMIhhaskFit4LoRxeJBKQbHK3KUiTcnySTOZCZBV9ZBIfZBiALPBXiNP4jnEYdGv4fOup4FdByZBU7agtiNWNowhw0SCG1LbBp9giKJWJK0s5zhGZCOtZB5LkNy7SrhvCzHkZAUw9TqqwXTlQh2KLWx7zw7XfaZCEN5J97AZDZD'; // Aapka Access Token
 $test_event_code = 'TEST12345'; // Test karne ke baad isko khali '' kar dein
 // ==========================================
