@@ -13,9 +13,18 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const data = req.body;
+    // Safely parse body whether it comes from fetch (JSON) or sendBeacon (string)
+    let data = req.body;
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        data = {};
+      }
+    }
+
     if (!data || !data.event_name || !data.event_id) {
-      return res.status(400).json({ status: 'error', message: 'Invalid payload' });
+      return res.status(400).json({ status: 'error', message: 'Invalid payload', received: req.body });
     }
 
     const pixel_id = '1069242212826477'; // Aapka Pixel ID
