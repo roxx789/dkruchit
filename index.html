@@ -10,374 +10,92 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;_fbq.push=n;_fbq.loaded=!0;_fbq.version='2.0';
-    _fbq.queue=[];t=b.createElement(e);t.async=!0;
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    // Unique Event ID for PageView
     var pageViewEventId = 'pv_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
-    
     fbq('init', '1069242212826477'); 
     fbq('track', 'PageView', {}, {eventID: pageViewEventId});
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" 
-             src="https://www.facebook.com/tr?id=1069242212826477&ev=PageView&noscript=1"/>
-    </noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1069242212826477&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        body {
-            background-color: #06090c;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 16px;
-        }
-
-        .wrapper {
-            width: 100%;
-            max-width: 410px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Top Ticker Marquee / Bar */
-        .top-ticker {
-            width: 100%;
-            background: rgba(34, 197, 94, 0.08);
-            border: 1px solid rgba(34, 197, 94, 0.25);
-            color: #4ade80;
-            font-size: 11.5px;
-            font-weight: 700;
-            padding: 10px 12px;
-            border-radius: 12px;
-            margin-bottom: 22px;
-            letter-spacing: 0.5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Profile Ring with Glowing Green Gradient */
-        .profile-container {
-            position: relative;
-            width: 135px;
-            height: 135px;
-            border-radius: 50%;
-            padding: 4px;
-            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
-            margin-bottom: 16px;
-            box-shadow: 0 0 30px rgba(34, 197, 94, 0.35);
-        }
-
-        .profile-inner {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #111822;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-inner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Live Market Updates Badge */
-        .live-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(34, 197, 94, 0.12);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            color: #4ade80;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-        }
-
-        .live-badge span {
-            width: 7px;
-            height: 7px;
-            background-color: #4ade80;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #4ade80;
-        }
-
-        /* Brand Title */
-        h1 {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: 0.3px;
-            color: #ffffff;
-            margin-bottom: 12px;
-        }
-
-        h1 span {
-            color: #22c55e;
-        }
-
-        /* Description text */
-        .description {
-            font-size: 13.5px;
-            color: #94a3b8;
-            line-height: 1.55;
-            font-weight: 500;
-            margin-bottom: 24px;
-            padding: 0 10px;
-        }
-
-        /* Glowing CTA Button */
-        .cta-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
-            color: #06090c;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 800;
-            padding: 18px;
-            border-radius: 16px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 6px 25px rgba(34, 197, 94, 0.4);
-            transition: transform 0.15s ease, opacity 0.15s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-
-        .cta-btn:active {
-            transform: scale(0.98);
-        }
-
-        .cta-btn:disabled {
-            opacity: 0.8;
-            cursor: not-allowed;
-        }
-
-        /* Sub CTA Hint */
-        .sub-cta-hint {
-            font-size: 12px;
-            color: #cbd5e1;
-            font-weight: 600;
-            margin-bottom: 22px;
-        }
-
-        /* Feature Pills Container */
-        .pills-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-
-        .pills-row {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-        }
-
-        .pill-box {
-            flex: 1;
-            background: #10161f;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #cbd5e1;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 12px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            text-align: center;
-        }
-
-        .pill-full {
-            width: 100%;
-            background: #10161f;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #cbd5e1;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 12px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        /* Footer Spam / Educational Note */
-        .footer-note {
-            font-size: 11px;
-            color: #64748b;
-            line-height: 1.4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
+        body{background:#06090c;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:16px}
+        .wrapper{width:100%;max-width:410px;display:flex;flex-direction:column;align-items:center;text-align:center}
+        .top-ticker{width:100%;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);color:#4ade80;font-size:11.5px;font-weight:700;padding:10px 12px;border-radius:12px;margin-bottom:22px;letter-spacing:0.5px;display:flex;justify-content:center;align-items:center;gap:8px}
+        .profile-container{position:relative;width:135px;height:135px;border-radius:50%;padding:4px;background:linear-gradient(135deg,#22c55e 0%,#10b981 100%);margin-bottom:16px;box-shadow:0 0 30px rgba(34,197,94,0.35)}
+        .profile-inner{width:100%;height:100%;border-radius:50%;background:#111822;overflow:hidden;display:flex;align-items:center;justify-content:center}
+        .profile-inner img{width:100%;height:100%;object-fit:cover}
+        .live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);color:#4ade80;font-size:11px;font-weight:700;letter-spacing:0.8px;padding:6px 14px;border-radius:20px;margin-bottom:14px;text-transform:uppercase}
+        .live-badge span{width:7px;height:7px;background:#4ade80;border-radius:50%;box-shadow:0 0 8px #4ade80}
+        h1{font-size:26px;font-weight:800;margin-bottom:12px} h1 span{color:#22c55e}
+        .description{font-size:13.5px;color:#94a3b8;line-height:1.55;font-weight:500;margin-bottom:24px;padding:0 10px}
+        .cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:linear-gradient(135deg,#22c55e 0%,#10b981 100%);color:#06090c;text-decoration:none;font-size:16px;font-weight:800;padding:18px;border-radius:16px;border:none;cursor:pointer;box-shadow:0 6px 25px rgba(34,197,94,0.4);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+        .cta-btn:disabled{opacity:0.8;cursor:not-allowed}
+        .sub-cta-hint{font-size:12px;color:#cbd5e1;font-weight:600;margin-bottom:22px}
+        .pills-container{width:100%;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+        .pills-row{display:flex;gap:10px;width:100%}
+        .pill-box{flex:1;background:#10161f;border:1px solid rgba(255,255,255,0.08);color:#cbd5e1;font-size:12px;font-weight:600;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:6px}
+        .pill-full{width:100%;background:#10161f;border:1px solid rgba(255,255,255,0.08);color:#cbd5e1;font-size:12px;font-weight:600;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:6px}
+        .footer-note{font-size:11px;color:#64748b;display:flex;align-items:center;justify-content:center;gap:5px}
     </style>
 </head>
 <body>
-
     <div class="wrapper">
-        <!-- Top Ticker Bar -->
-        <div class="top-ticker">
-            NIFTY 56,000+ ▲ &nbsp;|&nbsp; BANKNIFTY ▲ &nbsp;|&nbsp; RELIANCE ▲
-        </div>
-
-        <!-- Profile Picture with Glowing Ring -->
-        <div class="profile-container">
-            <div class="profile-inner">
-                <img src="profile.png" alt="Stock Learner">
-            </div>
-        </div>
-
-        <!-- Live Badge -->
-        <div class="live-badge">
-            <span></span> Live Market Updates
-        </div>
-
-        <!-- Brand Title -->
+        <div class="top-ticker">NIFTY 56,000+ ▲ &nbsp;|&nbsp; BANKNIFTY ▲ &nbsp;|&nbsp; RELIANCE ▲</div>
+        <div class="profile-container"><div class="profile-inner"><img src="profile.png" alt="Stock Learner"></div></div>
+        <div class="live-badge"><span></span> Live Market Updates</div>
         <h1>Stock <span>Learner</span></h1>
-
-        <!-- Description -->
-        <p class="description">
-            Daily stock market insights, chart breakdowns & smart money learning — seedhi Telegram par, bilkul FREE.
-        </p>
-
-        <!-- Main CTA Button -->
-        <button id="joinBtn" class="cta-btn" onclick="redirectToTelegram()">
-            🚀 JOIN TELEGRAM CHANNEL
-        </button>
-
-        <!-- Sub CTA Hint -->
-        <div class="sub-cta-hint">
-            ⚡ Tap above to join instantly (100% Free Today)
-        </div>
-
-        <!-- Pills Grid -->
+        <p class="description">Daily stock market insights, chart breakdowns & smart money learning — seedhi Telegram par, bilkul FREE.</p>
+        <button id="joinBtn" class="cta-btn" onclick="redirectToTelegram()">🚀 JOIN TELEGRAM CHANNEL</button>
+        <div class="sub-cta-hint">⚡ Tap above to join instantly (100% Free Today)</div>
         <div class="pills-container">
-            <div class="pills-row">
-                <div class="pill-box">📈 Chart Breakdowns</div>
-                <div class="pill-box">⚡ Live Market Updates</div>
-            </div>
-            <div class="pill-full">
-                ✓ Active Traders Community
-            </div>
+            <div class="pills-row"><div class="pill-box">📈 Chart Breakdowns</div><div class="pill-box">⚡ Live Market Updates</div></div>
+            <div class="pill-full">✓ Active Traders Community</div>
         </div>
-
-        <!-- Footer Note -->
-        <div class="footer-note">
-            🔒 No spam. Educational purposes only. Join in 1 click →
-        </div>
+        <div class="footer-note">🔒 No spam. Educational purposes only. Join in 1 click →</div>
     </div>
 
-    <script>
-        let isLeadFired = false;
+<script>
+let isLeadFired = false;
+function getCookie(name){let m=document.cookie.match(new RegExp('(^| )'+name+'=([^;]+)'));return m?m[2]:null}
 
-        // Cookie reader helper for _fbp and _fbc
-        function getCookie(name) {
-            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-            return match ? match[2] : null;
-        }
+function sendCapiEvent(eventName, eventId){
+    var payload = JSON.stringify({
+        event_name: eventName,
+        event_id: eventId,
+        event_source_url: window.location.href,
+        fbp: getCookie('_fbp'),
+        fbc: getCookie('_fbc')
+    });
+    if(navigator.sendBeacon){navigator.sendBeacon('/api/capi', payload)}
+    else{fetch('/api/capi',{method:'POST',headers:{'Content-Type':'application/json'},body:payload,keepalive:true})}
+}
+window.addEventListener('load', function(){ setTimeout(function(){ sendCapiEvent('PageView', pageViewEventId); }, 300); });
 
-        function sendCapiEvent(eventName, eventId) {
-            var payload = JSON.stringify({
-                event_name: eventName,
-                event_id: eventId,
-                event_source_url: window.location.href,
-                fbp: getCookie('_fbp'),
-                fbc: getCookie('_fbc')
-            });
-
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon('/api/capi', payload);
-            } else {
-                fetch('/api/capi', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: payload,
-                    keepalive: true
-                }).catch(function(err) {});
-            }
-        }
-
-        // Send PageView to CAPI automatically on load
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                sendCapiEvent('PageView', pageViewEventId);
-            }, 300);
-        });
-
-        function redirectToTelegram() {
-            var inviteCode = "UFyrjvBz-Xc4MWQ1"; // Yahan apna invite code daal dein
-            var appLink = "tg://join?invite=" + inviteCode; // Direct Telegram App kholne ke liye (No ISP Block)
-            var webFallback = "https://t.me/+" + inviteCode; // Web fallback
-            var btn = document.getElementById("joinBtn");
-
-            if (!isLeadFired) {
-                isLeadFired = true;
-                btn.innerText = "Opening Telegram...";
-                btn.disabled = true;
-
-                // Unique Lead Event ID for Deduplication
-                var leadEventId = 'lead_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
-
-                // 1. Browser Pixel Lead Event
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', {}, {eventID: leadEventId});
-                }
-
-                // 2. Server CAPI Lead Event
-                sendCapiEvent('Lead', leadEventId);
-            }
-
-            // Safe Redirection to Telegram App with Web Fallback
-            setTimeout(function() {
-                window.location.href = appLink;
-                
-                setTimeout(function() {
-                    window.location.href = webFallback;
-                }, 1500);
-            }, 500);
-        }
-    </script>
-
+function redirectToTelegram(){
+    var inviteCode = "UFyrjvBz-Xc4MWQ1";
+    var appLink = "tg://join?invite=" + inviteCode;
+    var webFallback = "https://t.me/+" + inviteCode;
+    var btn = document.getElementById("joinBtn");
+    if(!isLeadFired){
+        isLeadFired = true;
+        btn.innerText = "Opening Telegram...";
+        btn.disabled = true;
+        var leadEventId = 'lead_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
+        if(typeof fbq !== 'undefined'){ fbq('track', 'Lead', {}, {eventID: leadEventId}); }
+        sendCapiEvent('Lead', leadEventId);
+    }
+    setTimeout(function(){
+        window.location.href = appLink;
+        setTimeout(function(){ window.location.href = webFallback; }, 1500);
+    }, 500);
+}
+</script>
 </body>
 </html>
