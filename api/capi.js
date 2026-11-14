@@ -28,7 +28,7 @@ module.exports = async function handler(req, res) {
     }
 
     const pixel_id = '1069242212826477'; // Aapka Pixel ID
-    const access_token = 'EAAQPoXcPCrEBSypifnOlJcvkuLxhcMIhhaskFit4LoRxeJBKQbHK3KUiTcnySTOZCZBV9ZBIfZBiALPBXiNP4jnEYdGv4fOup4FdByZBU7agtiNWNowhw0SCG1LbBp9giKJWJK0s5zhGZCOtZB5LkNy7SrhvCzHkZAUw9TqqwXTlQh2KLWx7zw7XfaZCEN5J97AZDZD'; // Aapka Access Token
+    const access_token = 'EAAQPoXcPCrEBS5zWbj7UjcqBET43CRyxpugzBeVgf9aDdtkIuTevglxPsgBYCYceYiiHi3WgZCB0iXyY04kIdBn8y6K1Bl43om6ZAwzYxidNTN0IspbD10rebqowZAojETW24HErOoDWZAq0MBUFGncIHPBZCqzjIpHXcadDcS4n1ja5h91xxoFIxiZAqIoQZDZD'; // Aapka Updated Access Token
     const test_event_code = ''; // Test poora hone ke baad ise khali '' kar dena
 
     const clientIp = req.headers['x-forwarded-for'] ? req.headers['x-forwarded-for'].split(',')[0].trim() : (req.socket.remoteAddress || '');
