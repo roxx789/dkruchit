@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Learner - Join Telegram</title>
-    
-    <!-- Meta Pixel Code -->
+    <title>Market Learning & Analytics Hub</title>
+    <meta name="description" content="Technical analysis and market learning community. Educational content only.">
+
+    <!-- Meta Pixel -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,87 +16,322 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    
-    var pageViewEventId = 'pv_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
-    fbq('init', '1069242212826477'); 
-    fbq('track', 'PageView', {}, {eventID: pageViewEventId});
+
+    fbq('init', '1069242212826477');
+    fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1069242212826477&ev=PageView&noscript=1"/></noscript>
-    <!-- End Meta Pixel Code -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <noscript>
+        <img height="1" width="1" style="display:none" alt=""
+             src="https://www.facebook.com/tr?id=1069242212826477&ev=PageView&noscript=1">
+    </noscript>
+
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
-        body{background:#06090c;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:16px}
-        .wrapper{width:100%;max-width:410px;display:flex;flex-direction:column;align-items:center;text-align:center}
-        .top-ticker{width:100%;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);color:#4ade80;font-size:11.5px;font-weight:700;padding:10px 12px;border-radius:12px;margin-bottom:22px;letter-spacing:0.5px;display:flex;justify-content:center;align-items:center;gap:8px}
-        .profile-container{position:relative;width:135px;height:135px;border-radius:50%;padding:4px;background:linear-gradient(135deg,#22c55e 0%,#10b981 100%);margin-bottom:16px;box-shadow:0 0 30px rgba(34,197,94,0.35)}
-        .profile-inner{width:100%;height:100%;border-radius:50%;background:#111822;overflow:hidden;display:flex;align-items:center;justify-content:center}
-        .profile-inner img{width:100%;height:100%;object-fit:cover}
-        .live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);color:#4ade80;font-size:11px;font-weight:700;letter-spacing:0.8px;padding:6px 14px;border-radius:20px;margin-bottom:14px;text-transform:uppercase}
-        .live-badge span{width:7px;height:7px;background:#4ade80;border-radius:50%;box-shadow:0 0 8px #4ade80}
-        h1{font-size:26px;font-weight:800;margin-bottom:12px} h1 span{color:#22c55e}
-        .description{font-size:13.5px;color:#94a3b8;line-height:1.55;font-weight:500;margin-bottom:24px;padding:0 10px}
-        .cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:linear-gradient(135deg,#22c55e 0%,#10b981 100%);color:#06090c;text-decoration:none;font-size:16px;font-weight:800;padding:18px;border-radius:16px;border:none;cursor:pointer;box-shadow:0 6px 25px rgba(34,197,94,0.4);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
-        .cta-btn:disabled{opacity:0.8;cursor:not-allowed}
-        .sub-cta-hint{font-size:12px;color:#cbd5e1;font-weight:600;margin-bottom:22px}
-        .pills-container{width:100%;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
-        .pills-row{display:flex;gap:10px;width:100%}
-        .pill-box{flex:1;background:#10161f;border:1px solid rgba(255,255,255,0.08);color:#cbd5e1;font-size:12px;font-weight:600;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:6px}
-        .pill-full{width:100%;background:#10161f;border:1px solid rgba(255,255,255,0.08);color:#cbd5e1;font-size:12px;font-weight:600;padding:12px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:6px}
-        .footer-note{font-size:11px;color:#64748b;display:flex;align-items:center;justify-content:center;gap:5px}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0b0f12;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: #12181f;
+            border: 1px solid #1e2836;
+            border-radius: 20px;
+            padding: 40px 24px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .profile-img-box {
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(180deg, #ffd700, #ff9900);
+            box-shadow: 0 0 18px rgba(255, 215, 0, 0.4);
+        }
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+        h1 {
+            color: #eab308;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .sub-title {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .tags {
+            color: #94a3b8;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+        .cta-btn {
+            display: block;
+            width: 100%;
+            background-color: #0ea5e9;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+            transition: transform 0.2s, background-color 0.2s, opacity 0.2s;
+            margin-bottom: 10px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .cta-btn:active {
+            transform: scale(0.98);
+        }
+        .cta-btn.is-loading {
+            opacity: 0.75;
+        }
+        .cta-note {
+            color: #94a3b8;
+            font-size: 11px;
+            margin-bottom: 14px;
+        }
+        .fallback {
+            display: none;
+            color: #cbd5e1;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .fallback a {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        .features-list {
+            list-style: none;
+            margin: 11px 0 25px;
+            text-align: left;
+            padding-left: 15px;
+        }
+        .features-list li {
+            color: #cbd5e1;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .disclaimer {
+            color: #64748b;
+            font-size: 10px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .managed-tag {
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 10px;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+        .managed-tag span {
+            color: #38bdf8;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="top-ticker">NIFTY 56,000+ ▲ &nbsp;|&nbsp; BANKNIFTY ▲ &nbsp;|&nbsp; RELIANCE ▲</div>
-        <div class="profile-container"><div class="profile-inner"><img src="profile.png" alt="Stock Learner"></div></div>
-        <div class="live-badge"><span></span> Live Market Updates</div>
-        <h1>Stock <span>Learner</span></h1>
-        <p class="description">Daily stock market insights, chart breakdowns & smart money learning — seedhi Telegram par, bilkul FREE.</p>
-        <button id="joinBtn" class="cta-btn" onclick="redirectToTelegram()">🚀 JOIN TELEGRAM CHANNEL</button>
-        <div class="sub-cta-hint">⚡ Tap above to join instantly (100% Free Today)</div>
-        <div class="pills-container">
-            <div class="pills-row"><div class="pill-box">📈 Chart Breakdowns</div><div class="pill-box">⚡ Live Market Updates</div></div>
-            <div class="pill-full">✓ Active Traders Community</div>
+
+    <div class="container">
+        <div class="profile-img-box">
+            <img src="profile.png" alt="Market Analytics Hub" width="105" height="105">
         </div>
-        <div class="footer-note">🔒 No spam. Educational purposes only. Join in 1 click →</div>
+
+        <h1>Market Analytics Hub</h1>
+
+        <div class="sub-title">Technical Analysis & Learning Community</div>
+        <div class="tags">MARKET TRENDS · CHART PATTERNS · EDUCATIONAL INSIGHTS</div>
+
+        <!-- Real link: JS band ho tab bhi kaam karega -->
+        <a class="cta-btn" id="joinBtn" href="https://t.me/+UFyrjvBz-Xc4MWQ1" rel="noopener">
+            Join Free Community Channel
+        </a>
+        <div class="cta-note">Telegram app zaroori hai · Button dabane ke baad "Join" par tap karein</div>
+
+        <div class="fallback" id="fallback">
+            Telegram nahi khula?
+            <a href="https://t.me/+UFyrjvBz-Xc4MWQ1" rel="noopener">Yahan tap karein</a>
+            ya pehle Telegram app install karein.
+        </div>
+
+        <ul class="features-list">
+            <li>✓ Daily Market Trends & Studies</li>
+            <li>✓ Technical Analysis & Chart Concepts</li>
+            <li>✓ Educational Case Studies & Views</li>
+        </ul>
+
+        <p class="disclaimer">
+            <strong>Disclaimer:</strong> This platform and community are strictly for educational and informational purposes only. We do not provide any tips, advisory, or recommendation services, nor are we engaged in portfolio management. Financial markets are subject to high risks. Please consult a SEBI-registered financial advisor before making any investment or trading decisions.
+        </p>
+
+        <div class="managed-tag">
+            Managed by <span>elite marketing AGENCY</span>
+        </div>
     </div>
 
-<script>
-let isLeadFired = false;
-function getCookie(name){let m=document.cookie.match(new RegExp('(^| )'+name+'=([^;]+)'));return m?m[2]:null}
+    <script>
+    (function () {
+        // ---------- CONFIG ----------
+        var INVITE_HASH   = 'Rru-abFATts2NTA1';                 // t.me/+ ke baad wala hissa
+        var WEB_LINK      = 'https://t.me/+' + INVITE_HASH;     // fallback
+        var APP_LINK      = 'tg://join?invite=' + INVITE_HASH;  // seedha Telegram app
+        var CAPI_ENDPOINT = '/api/capi';                        // Server endpoint connect kar diya gaya hai
+        var FALLBACK_MS   = 2800; // Mobile OS prompt clash se bachne ke liye safe fallback window (2.8s)
+        var TRACK_DELAY   = 500;  // Pixel request poori dispatch hone ke liye safe gap (500ms)
+        // ----------------------------
 
-function sendCapiEvent(eventName, eventId){
-    var payload = JSON.stringify({
-        event_name: eventName,
-        event_id: eventId,
-        event_source_url: window.location.href,
-        fbp: getCookie('_fbp'),
-        fbc: getCookie('_fbc')
-    });
-    if(navigator.sendBeacon){navigator.sendBeacon('/api/capi', payload)}
-    else{fetch('/api/capi',{method:'POST',headers:{'Content-Type':'application/json'},body:payload,keepalive:true})}
-}
-window.addEventListener('load', function(){ setTimeout(function(){ sendCapiEvent('PageView', pageViewEventId); }, 300); });
+        var btn = document.getElementById('joinBtn');
+        var fallbackBox = document.getElementById('fallback');
+        var busy = false;
 
-function redirectToTelegram(){
-    var inviteCode = "UFyrjvBz-Xc4MWQ1";
-    var appLink = "tg://join?invite=" + inviteCode;
-    var webFallback = "https://t.me/+" + inviteCode;
-    var btn = document.getElementById("joinBtn");
-    if(!isLeadFired){
-        isLeadFired = true;
-        btn.innerText = "Opening Telegram...";
-        btn.disabled = true;
-        var leadEventId = 'lead_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
-        if(typeof fbq !== 'undefined'){ fbq('track', 'Lead', {}, {eventID: leadEventId}); }
-        sendCapiEvent('Lead', leadEventId);
-    }
-    setTimeout(function(){
-        window.location.href = appLink;
-        setTimeout(function(){ window.location.href = webFallback; }, 1500);
-    }, 500);
-}
-</script>
+        function getCookie(name) {
+            var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+            return m ? decodeURIComponent(m[1]) : '';
+        }
+
+        function store(key, value) {
+            try {
+                if (value === undefined) return sessionStorage.getItem(key);
+                sessionStorage.setItem(key, value);
+            } catch (e) { /* storage blocked: ignore */ }
+            return null;
+        }
+
+        // _fbc cookie na ho to URL ke fbclid se banao (in-app browsers mein aksar cookie nahi hoti)
+        function getFbc() {
+            var c = getCookie('_fbc');
+            if (c) return c;
+            var saved = store('fbc_fallback');
+            if (saved) return saved;
+            var m = window.location.search.match(/[?&]fbclid=([^&#]+)/);
+            if (!m) return '';
+            var built = 'fb.1.' + Date.now() + '.' + decodeURIComponent(m[1]);
+            store('fbc_fallback', built);
+            return built;
+        }
+
+        function newEventId() {
+            if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+            return 'ev_' + Date.now() + '_' + Math.random().toString(36).slice(2, 12);
+        }
+
+        function sendToServer(eventName, eventId) {
+            if (!CAPI_ENDPOINT) return;
+            var body = JSON.stringify({
+                event_name: eventName,
+                event_id: eventId,
+                event_source_url: window.location.href,
+                fbp: getCookie('_fbp'),
+                fbc: getFbc()
+            });
+            try {
+                // application/json Blob format taaki Vercel serverless request body ko 100% parse kar sake
+                var blob = new Blob([body], { type: 'application/json' });
+                if (navigator.sendBeacon && navigator.sendBeacon(CAPI_ENDPOINT, blob)) return;
+            } catch (e) { /* ignore blob error */ }
+
+            try {
+                fetch(CAPI_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: body,
+                    keepalive: true
+                }).catch(function () {});
+            } catch (e) { /* tracking fail ho to bhi redirect na ruke */ }
+        }
+
+        // Har click par event dispatch karein (testing aur accuracy ke liye)
+        function trackLeadOnce() {
+            var eventId = newEventId();
+            try {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', {}, { eventID: eventId }); // same ID browser aur server ko
+                }
+            } catch (e) {}
+            sendToServer('Lead', eventId);
+        }
+
+        function openTelegram() {
+            var timer = null;
+            var startTime = Date.now();
+
+            function cleanup() {
+                if (timer) { clearTimeout(timer); timer = null; }
+                document.removeEventListener('visibilitychange', onVisibilityChange);
+                window.removeEventListener('pagehide', cleanup);
+                window.removeEventListener('blur', cleanup);
+            }
+            function onVisibilityChange() {
+                // Agar user app mein switch kar gaya ya screen hide hui
+                if (document.hidden) cleanup();
+            }
+
+            document.addEventListener('visibilitychange', onVisibilityChange);
+            window.addEventListener('pagehide', cleanup);
+            window.addEventListener('blur', cleanup);
+
+            // Pehle seedha Telegram app open karne ki koshish karein
+            window.location.href = APP_LINK;
+
+            // App na hone par fallback window (prompt clash se bachne ke liye 2.8s wait)
+            timer = setTimeout(function () {
+                var elapsed = Date.now() - startTime;
+                cleanup();
+                fallbackBox.style.display = 'block';
+
+                // Agar page visible raha aur user app mein nahi gaya, tabhi web link par bhejein
+                if (!document.hidden && elapsed < (FALLBACK_MS + 1000)) {
+                    window.location.href = WEB_LINK;
+                }
+            }, FALLBACK_MS);
+        }
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (busy) return;
+            busy = true;
+            btn.classList.add('is-loading');
+
+            trackLeadOnce();
+
+            // Pixel aur CAPI network request safely nikalne ke liye 500ms ka buffer
+            setTimeout(openTelegram, TRACK_DELAY);
+
+            // User wapas page par aaye to button dubara active ho jaye
+            setTimeout(function () {
+                busy = false;
+                btn.classList.remove('is-loading');
+            }, 4000);
+        });
+    })();
+    </script>
+
 </body>
 </html>
